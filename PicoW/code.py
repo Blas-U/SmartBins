@@ -30,18 +30,19 @@ scale = 25000.0
 
 logger = GETLogger("TFS Students", "Fultoneagles", "http://popu.local/logger/logger.php")
 
+old_mass = 0
 
 while True:
     try:
         #scale equation
         mass = hx.read()/scale
         x = 3.58636 + mass
-        real_mass = (x-.26854061)/0.01628224
+        real_mass = round((x-.26854061)/0.01628224)
 #EACH SCALE HAST TO BE CALIBRATED I.E A 20Kg SCALE WILL HAVE A DIFFERENT EQUATION TO A 5Kg SCALE.
-        data["reading"] = real_mass
+        data["reading"] = round(real_mass)
         if old_mass != real_mass:
             logger.log(data)
         old_mass = real_mass
-        time.sleep(5)
+        time.sleep(1)
     except Exception as e:
         print("Error:\n", str(e))
