@@ -7,6 +7,67 @@
     <title>Smartbins</title>
 </head>
 <body>
+
+
+    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<script>
+    var xValues = [1,2,3];
+    var yValues = [1,2,3];
+    fetch("pico_Potato.json", { cahce: "no-cache"})
+        .then(x => x.test())
+        .then(y => processData(y));
+
+    function processData(rawData){
+        entries = [];
+        rawData = rawData.split("\n");
+        for (let line of rawData){
+            if (line) {
+                let d = JSON.parse(line);
+                entries.push(d);
+            }
+        }
+        for (let line of entries){
+            xValues.push(line.time)
+            yValues.push(line.reading)
+
+        }
+        }
+
+
+    // a = 0.6931471806/5730
+    //     s = 100;
+
+    // for (i=0; i<8; i++){
+        //t = ;
+        
+        //T = 
+       // xValues.push(t);
+       // yValues.push(T);
+    
+    new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 0, max:100}}],
+        }
+      }
+    });
+    </script>
+
  lily was here   
 
  no 
