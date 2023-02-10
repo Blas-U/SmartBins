@@ -8,7 +8,7 @@ from GETLogger import *
 
 # set up data structure
 data = {}
-data["picoID"] = "Scale1"
+data["picoID"] = "HayHay"
 data["sensor"] = "Mass"
 data["reading"] = ""
 data["units"] = "g"
