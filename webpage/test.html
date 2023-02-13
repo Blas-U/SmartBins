@@ -25,9 +25,10 @@
         rawData = rawData.split("\n");
         for (let line of rawData){
             if (line) {
+              console.log(line)
                 let d = JSON.parse(line);
                 entries.push(d);
-                console.log(d)
+
             }
         }
         for (let line of entries){
