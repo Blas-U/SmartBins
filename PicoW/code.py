@@ -32,7 +32,7 @@ time.sleep(0.050)
 logger = GETLogger("TFS Students", "Fultoneagles", "http://popu.local/logger/logger.php")
 
 #calabrate the sensor using reading (x) and the mass (y) of the scale for two different masses.
-sensor = massSensor(2,2,3,3)
+sensor = massSensor(652055,1510,911010,2084)
 
 while True:
     try:
