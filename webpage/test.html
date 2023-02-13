@@ -33,14 +33,16 @@
             }
             n++;
         }
+        var xValues = entries.slice(2,3);
+        var yValues = entries.slice(3,4);
+
         for (let line of entries){
             xValues.push(line.time)
             yValues.push(line.reading)
 
         }
         }
-        var xValues = d.slice(2,3);
-        var yValues = d.slice(3,4);
+
 
     // a = 0.6931471806/5730
     //     s = 100;
