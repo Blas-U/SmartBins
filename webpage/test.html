@@ -15,7 +15,7 @@
 
 <script>
     var xValues = entries.slice(2,3);
-    var yValues = [70, 10, 100];
+    var yValues = entries.slice(3,4);
     fetch("pico_Test.json", { cache: "no-cache"})
         .then(x => x.text())
         .then(y => processData(y));
