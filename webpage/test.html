@@ -14,8 +14,8 @@
 
 
 <script>
-    var xValues = [];
-    var yValues = [];
+    var xValues = [1];
+    var yValues = [1];
     fetch("pico_Potato.json", { cache: "no-cache"})
         .then(x => x.text())
         .then(y => processData(y));
