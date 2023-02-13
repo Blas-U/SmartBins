@@ -14,8 +14,8 @@
 
 
 <script>
-    var xValues = [1,2,3];
-    var yValues = [1,2,3];
+    var xValues = [entries];
+    var yValues = [];
     fetch("pico_Potato.json", { cache: "no-cache"})
         .then(x => x.text())
         .then(y => processData(y));
@@ -68,8 +68,5 @@
     });
     </script>
 
- lily was here   
-
- no 
 </body>
 </html>
