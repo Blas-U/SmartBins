@@ -14,7 +14,7 @@
 
 
 <script>
-    var xValues = [70, 10, 100];
+    var xValues = entries["reading"];
     var yValues = [70, 10, 100];
     fetch("pico_Test.json", { cache: "no-cache"})
         .then(x => x.text())
