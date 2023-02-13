@@ -14,6 +14,8 @@
 
 
 <script>
+        var xValues = [];
+        var yValues = [];
 
     fetch("pico_Test.json", { cache: "no-cache"})
         .then(x => x.text())
@@ -33,10 +35,10 @@
             }
             n++;
         }
-        var xValues = entries.slice(2,3);
-        var yValues = entries.slice(3,4);
+
 
         for (let line of entries){
+          console.log(line)
             xValues.push(line.time)
             yValues.push(line.reading)
 
@@ -55,8 +57,9 @@
        // yValues.push(T);
     
     new Chart("myChart", {
-      type: "line",
-      data: {
+      type: "scatter",
+      data: ,
+      options: {
         labels: xValues,
         datasets: [{
           fill: false,
