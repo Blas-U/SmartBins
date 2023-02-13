@@ -26,7 +26,7 @@
         for (let line of rawData){
             if (line) {
               console.log(line)
-                let d = JSON.parse(line);
+                let d = JSON.parse(line + "}");
                 entries.push(d);
 
             }
