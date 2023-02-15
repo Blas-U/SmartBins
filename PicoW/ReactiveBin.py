@@ -30,7 +30,7 @@ time.sleep(0.050)
 
 
 
-logger = GETLogger("TFS Students", "Fultoneagles", "http://popu.local/logger/logger.php")
+logger = GETLogger("TFS Students", "Fultoneagles", "http://192.168.0.161/WWT/webpage/logger.php")
 
 #calabrate the sensor using reading (x) and the mass (y) of the scale for two different masses.
 sensor = massSensor(652055,1510,911010,2084)
@@ -42,7 +42,7 @@ while True:
     try:
         #scale equation
         x = hx.read()
-        real_mass = int(sensor.ymass(x))
+        real_mass = int(round(sensor.ymass(x), -1))
 
         # real_mass = sensor.getMB()*x+63.5
 #EACH SCALE HAST TO BE CALIBRATED I.E A 20Kg SCALE WILL HAVE A DIFFERENT EQUATION TO A 5Kg SCALE.
