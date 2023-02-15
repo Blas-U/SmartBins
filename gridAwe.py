@@ -17,7 +17,7 @@ class gridAwe:
         self.w= (33,33,33) #white
         self.pi= (80,20,20) #pink
         self.t= (0,70,30) #teal
-
+        self.bl= (0,0,0) #black
     def pix(self,r,c,col= (10,0,0)):
         if (r %2)==0:
             y=16*r-c
@@ -54,6 +54,10 @@ class gridAwe:
         for i in range (1,17):
             for j in range (16,0,-1):
                 self.pix(i,j,self.b)
+    def blankScreen(self):
+        for i in range (1,17):
+            for j in range (16,0,-1):
+                self.pix(i,j,self.bl)
 
     def drawGrid(self,grid):
         for i in range (1,17):
