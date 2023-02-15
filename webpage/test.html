@@ -14,12 +14,14 @@
 
 
 <script>
+    var x = setInterval(function(){
         var xValues = [];
         var yValues = [];
 
-    fetch("pico_Scaler.json", { cache: "no-cache"})
-        .then(x => x.text())
-        .then(y => processData(y));
+      fetch("pico_Scaler.json", { cache: "no-cache"})
+          .then(x => x.text())
+          .then(y => processData(y));
+    }, 1000);
 
     function processData(rawData){
         entries = [];
@@ -47,35 +49,35 @@
       
 
 
-    // a = 0.6931471806/5730
-    //     s = 100;
+        // a = 0.6931471806/5730
+        //     s = 100;
 
-    // for (i=0; i<8; i++){
-        //t = ;
+        // for (i=0; i<8; i++){
+            //t = ;
+            
+            //T = 
+          // xValues.push(t);
+          // yValues.push(T);
         
-        //T = 
-       // xValues.push(t);
-       // yValues.push(T);
-    
-    new Chart("myChart", {
-      type: "line",
-      data:{
-        labels: xValues,
-        datasets: [{
-          fill: false,
-          lineTension: 0,
-          backgroundColor: "rgba(0,0,255,1.0)",
-          borderColor: "rgba(0,0,255,0.1)",
-          data: yValues
-        }]
-      },
-      options: {
-        legend: {display: false},
-        scales: {
-          xAxes: [{ticks: {min: 0, max:300}}],
-          yAxes: [{ticks: {min: 0, max:300}}],
-        }
-      }
+        new Chart("myChart", {
+          type: "line",
+          data:{
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            scales: {
+              xAxes: [{ticks: {min: 0, max:300}}],
+              yAxes: [{ticks: {min: 0, max:300}}],
+            }
+          }
     });
   }
     </script>
