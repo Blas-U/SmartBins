@@ -42,7 +42,7 @@
 
         for (let line of entries){
           console.log(line)
-            var t = new Date((line.time - 60 * 60 * 6) * 10000)
+            var t = new Date((line.time - 60 * 60 * 6))
             var d = (t.toLocaleString("en-US"));
             xValues.push(d);
             yValues.push(line.reading)
