@@ -17,7 +17,7 @@
     var x = setInterval(function(){
 
 
-      fetch("pico_Scaler.json", { cache: "no-cache"})
+      fetch("pico_HayHay.json", { cache: "no-cache"})
           .then(x => x.text())
           .then(y => processData(y));
     }, 1000);
@@ -78,8 +78,8 @@
               },
             legend: {display: false},
             scales: {
-              xAxes: [{ticks: {min: 0, max:300}}],
-              yAxes: [{ticks: {min: 0, max:300}}],
+              xAxes: [{ticks: {min: 0, max:500}}],
+              yAxes: [{ticks: {min: 0, max:500}}],
             }
           }
     });
