@@ -63,7 +63,6 @@
         new Chart("myChart", {
           type: "line",
           data:{
-            duration: 0,
             labels: xValues,
             datasets: [{
               fill: false,
@@ -74,6 +73,9 @@
             }]
           },
           options: {
+            animation: {
+              duration:0
+            }
             legend: {display: false},
             scales: {
               xAxes: [{ticks: {min: 0, max:300}}],
