@@ -43,7 +43,7 @@
         for (let line of entries){
           console.log(line)
             var t = new Date(line.time * 10000)
-            var d = (t.toLocaleTimeString("en-US"));
+            var d = (t.toLocaleString("en-US"));
             xValues.push(d);
             yValues.push(line.reading)
           
