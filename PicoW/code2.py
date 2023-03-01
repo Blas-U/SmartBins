@@ -50,7 +50,6 @@ while True:
         if old_mass != real_mass:
            #code below if for LEDs
             grid.hourglass(True)
-            logger.log(data)
             time.sleep(1)
             grid.blankScreen()
             grid.hourglass()
@@ -59,6 +58,7 @@ while True:
             x = hx.read()
             real_mass = int(round (sensor.ymass(x),-1))
             data["reading"] = real_mass
+            logger.log(data)
             #grid.smileyFace()
             
              
