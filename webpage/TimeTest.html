@@ -17,7 +17,7 @@
     var x = setInterval(function(){
 
 
-      fetch("pico_HayHay.json", { cache: "no-cache"})
+      fetch("pico_BlasTest.json", { cache: "no-cache"})
           .then(x => x.text())
           .then(y => processData(y));
     }, 1000);
@@ -42,13 +42,11 @@
 
         for (let line of entries){
           console.log(line)
-            var t = new Date(line.time * 1000)
-            var d = t.toLocaleString("en-US",{ hour12: false });
-            xValues.push(d);
+            xValues.push(line.time)
             yValues.push(line.reading)
           
         }
-        //console.log(xValues, yValues)
+        console.log(xValues, yValues)
       
 
 

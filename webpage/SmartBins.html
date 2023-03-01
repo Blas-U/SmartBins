@@ -42,11 +42,13 @@
 
         for (let line of entries){
           console.log(line)
-            xValues.push(line.time)
+            var t = new Date(line.time * 1000)
+            var d = t.toLocaleString("en-US",{ hour12: false });
+            xValues.push(d);
             yValues.push(line.reading)
           
         }
-        console.log(xValues, yValues)
+        //console.log(xValues, yValues)
       
 
 
