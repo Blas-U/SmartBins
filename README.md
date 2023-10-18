@@ -1,4 +1,8 @@
-# WWT
+# smartBin Project
+
+# Install
+Download and copy the appropriate circuitpython file to the Raspberry Pi Pico  W:
+* from https://circuitpython.org/board/raspberry_pi_pico_w/
 
 ## PicoW/
 These are all the files that go directly on the Pico. 
